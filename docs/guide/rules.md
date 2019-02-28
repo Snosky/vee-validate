@@ -19,7 +19,7 @@ VeeValidate comes with a bunch of validation rules out of the box and they are a
 - [email](#email)
 - [ext](#ext)
 - [image](#image)
-- [included](#included)
+- [in](#in)
 - [integer](#integer)
 - [ip](#ip)
 - [is](#is)
@@ -307,16 +307,16 @@ The file added to the field under validation must have an image mime type (image
 <input v-validate="'image'" data-vv-as="image" name="image_field" type="file">
 ```
 
-## included
+## in
 
 The field under validation must have a value that is in the specified list.
 
-### included params
+### in params
 
-- `list:` An iterable, like arrays or sets or strings containing the allowed list of values. in string format it should be a comma separated list. i.e: `included:1,2,3`.
+- `list:` An iterable, like arrays or sets or strings containing the allowed list of values. in string format it should be a comma separated list. i.e: `in:1,2,3`.
 
 <span class="select">
-  <select v-validate="'included:1,2,3'" :class="{ 'is-danger': errors.has('in_field') }" name="in_field" data-vv-as="selected">
+  <select v-validate="'in:1,2,3'" :class="{ 'is-danger': errors.has('in_field') }" name="in_field" data-vv-as="selected">
     <option value="1">One</option>
     <option value="2">Two</option>
     <option value="3">Three</option>
